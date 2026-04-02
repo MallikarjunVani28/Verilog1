@@ -1,3 +1,6 @@
+// verilog code to count the number of one's and number of Zero's in the 100 bit number 
+
+
 module count_zeros_and_ones(input [99:0] x,output reg [6:0] ones,output reg [6:0] zeros);
 integer i;
 always @(*) begin
