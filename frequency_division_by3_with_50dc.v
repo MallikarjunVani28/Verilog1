@@ -1,0 +1,56 @@
+// verilog code for frequency division by 3
+// Code your design here
+module freq_div_3(input clk,rst,output clk_out);
+  reg [1:0]count;
+  reg a1,a2;
+  always@(posedge clk)begin
+    if(rst)
+      count<=0;
+    else if(count == 2)
+      count<=0;
+    else
+      count<=count+1'b1;
+  end
+  always @(posedge clk)begin
+    if(count==0)
+      a1=1;
+    else
+      a1=0;
+  end
+  always @(negedge clk)begin
+    if(count==0)
+      a2 = 1;
+    else
+      a2 =0;
+  end
+  assign clk_out = a1|a2;
+  
+endmodule
+
+    
+    
+      
+    
+  //testbench 
+
+module tb;
+  reg clk=0; 
+  reg rst;
+  wire clk_out;
+  freq_div_3 dut(clk,rst,clk_out);
+  always #5 clk = ~clk;
+  
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars(0,tb);
+    
+    
+  end
+  initial begin
+    rst = 1;
+    #10;
+    rst = 0;
+    #100;
+    $finish;
+  end
+endmodule
