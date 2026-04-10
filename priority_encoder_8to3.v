@@ -36,22 +36,4 @@ default :  y = 3'bzzz;
 endcase
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 endmodule
