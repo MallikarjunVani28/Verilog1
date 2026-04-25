@@ -1,63 +1,46 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   10:45:49 04/18/2026
-// Design Name:   siso
-// Module Name:   /home/mallikarjun/Desktop/veriloglab4/siso_tb.v
-// Project Name:  veriloglab4
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: siso
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
 
 module siso_tb;
 
 	// Inputs
 	reg clk;
 	reg rst;
-	reg s_in;
+	reg sin;
 
 	// Outputs
-	wire s_out;
+	wire sout;
 
 	// Instantiate the Unit Under Test (UUT)
 	siso uut (
 		.clk(clk), 
 		.rst(rst), 
-		.s_in(s_in), 
-		.s_out(s_out)
+		.sin(sin), 
+		.sout(sout)
 	);
 	always #5 clk = ~clk;
+
 	task initialize;
 	begin
-	{clk,rst,s_in} = 0;
+	
+	clk = 0;
+	rst = 0;
 	end
 	endtask
 	
 	task rst_dut;
 	begin
-	@(negedge clk)
+	
 	rst = 1;
-	@(negedge clk);
+	#10;
 	rst = 0;
 	end
 	endtask
 	
 	task inputs(input a);
 	begin
-	s_in = a;
+	
+	sin = a;
 	#10;
 	end
 	endtask
@@ -70,15 +53,16 @@ module siso_tb;
 	inputs(0);
 	inputs(1);
 	end
+	initial begin
+	#100;
+	$finish;
+	end
 	
-	initial  
-	$monitor("s_in = %b s_out = %b",s_in,s_out);
+	initial 
+	$monitor("sin = %b sout = %b",sin,sout);
 	
 	
-
 	
-
-
       
 endmodule
 
