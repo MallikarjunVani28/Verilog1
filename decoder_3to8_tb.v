@@ -1,26 +1,6 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   18:38:30 04/10/2026
-// Design Name:   decoder_3to8
-// Module Name:   /home/mallikarjun/Desktop/verilog_lab3/decoder_3to8_tb.v
-// Project Name:  verilog_lab3
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: decoder_3to8
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
+
 
 module decoder_3to8_tb;
 
