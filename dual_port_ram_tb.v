@@ -1,26 +1,6 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   18:57:35 04/21/2026
-// Design Name:   dual_por_ram
-// Module Name:   /home/mallikarjun/Desktop/verilog_lab5/dual_port_ram_tb.v
-// Project Name:  verilog_lab5
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: dual_por_ram
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
+
 
 module dual_port_ram_tb;
 
